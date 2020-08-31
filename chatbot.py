@@ -53,7 +53,7 @@ corpus = json.loads(f)
 with open("files/labelencoder.pkl","rb") as f:
     le = pickle.load(f)
 model = load_model('files/model.h5')
-1
+
 designations = {
     1: "intern",
     2: "jr dev",
