@@ -72,7 +72,7 @@ for intent in corpus['intents']:
 
 X = []
 Y = []
-pickle.dump(documents,open('documents.pkl','wb'))
+pickle.dump(documents,open('files/documents.pkl','wb'))
 for x,y in documents:
   X.append(x)
   Y.append(y)
@@ -82,12 +82,12 @@ for i in range(len(X)):
   X[i] = " ".join(li)
 vectorizer = CountVectorizer()
 vectorizer.fit(X)
-pickle.dump(vectorizer,open('vectorizer.pkl','wb'))
+pickle.dump(vectorizer,open('files/vectorizer.pkl','wb'))
 
 X_vectorized = vectorizer.transform(X).toarray()
 le = LabelEncoder()
 Y_encoded = le.fit_transform(Y)
-pickle.dump(le,open('labelencoder.pkl',"wb"))
+pickle.dump(le,open('files/labelencoder.pkl',"wb"))
 for i in range(len(X_vectorized)):
   X_vectorized[i] = np.asarray((X_vectorized[i]))
 
@@ -105,9 +105,9 @@ model.summary()
 
 history = model.fit(X_vectorized,np.array(Y_encoded),epochs=150,batch_size=5)
 
-model.save('model.h5',history)
+model.save('files/model.h5',history)
 
-with open("meta.pkl","w") as f:
+with open("files/meta.pkl","w") as f:
   dir_name = os.path.dirname(os.path.abspath(__file__))
   corpus_path = os.path.join(dir_name,"corpus.json")
   t = os.path.getmtime(corpus_path)

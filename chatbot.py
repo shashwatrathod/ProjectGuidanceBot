@@ -32,7 +32,7 @@ print("Please wait while we check for updates..\n\n")
 
 dir_name = os.path.dirname(os.path.abspath(__file__))
 train = False
-with open('meta.pkl','rb') as f:
+with open('files/meta.pkl','rb') as f:
     old_modified_time = f.read()
     corpus_path = os.path.join(dir_name,"corpus.json")
     new_modified_time = os.path.getmtime(corpus_path)
@@ -44,15 +44,15 @@ if train:
     print("\n\nUpdating..\n\n")
     import projectguidingbot        #importing this will execute the imported script.  This is not the best way to do it, but for the sake of time and simplicity, I've chosen this.
 
-with open("documents.pkl","rb") as f:
+with open("files/documents.pkl","rb") as f:
     documents = pickle.load(f)
-with open("vectorizer.pkl","rb") as f:
+with open("files/vectorizer.pkl","rb") as f:
     vectorizer = pickle.load(f)
 f = open('corpus.json').read()
 corpus = json.loads(f)
-with open("labelencoder.pkl","rb") as f:
+with open("files/labelencoder.pkl","rb") as f:
     le = pickle.load(f)
-model = load_model('model.h5')
+model = load_model('files/model.h5')
 1
 designations = {
     1: "intern",
