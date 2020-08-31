@@ -1,0 +1,107 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi there", "What is up","How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day","Ssuppp","Whats poppin","hi"],
+     "responses": ["Hola", "Good to see you again", "Hi there, how can I help?","Heyy! Welcome to the project team!"],
+     "access": "all"
+    },
+    {
+        "tag": "documentation",
+        "patterns": ["Where can i find the documentation?","Can i have the docuentation?","i want the documentation","give me the link for documentation",
+        "project documentation","i want the documentation for this project","project docs","send me docs","i want project docs"],
+        "responses": ["Here, *link for intern level documentations*","You can find the docs here : *link for intern level documentations*","Happy coding! *link for intern level documentations*"],
+        "access": "intern"
+    },
+    {
+        "tag": "documentation",
+        "patterns": ["Where can i find the documentation?","Can i have the docuentation?","i want the documentation","give me the link for documentation",
+            "project documentation","i want the documentation for this project","project docs","send me docs","i want project docs"],
+        "responses": ["Here, *link for jr dev level documentations*","You can find the docs here : *link for jr dev level documentations*","Happy coding! *link for jr dev level documentations*"],
+        "access": "jr dev"
+    },
+    {
+        "tag": "documentation",
+        "patterns": ["Where can i find the documentation?","Can i have the docuentation?","i want the documentation","give me the link for documentation",
+            "project documentation","i want the documentation for this project","project docs","send me docs","i want project docs"],
+        "responses": ["Here, *link for sr dev level documentations*","You can find the docs here : *link for sr dev level documentations*","Happy coding! *link for sr dev level documentations*"],
+        "access": "sr dev"
+    },
+    {
+        "tag": "documentation",
+        "patterns": ["Where can i find the documentation?","Can i have the docuentation?","i want the documentation","give me the link for documentation",
+            "project documentation","i want the documentation for this project","project docs","send me docs","i want project docs"],
+        "responses": ["Here, *link for executive level documentations*","You can find the docs here : *link for executive level documentations*","Happy coding! *link for executive level documentations*"],
+        "access": "executive"
+    },
+    {
+        "tag": "report",
+        "patterns": ["whom am i answerable to?","where can i submit my work?","i want to get my work verified","who is my supervisor","whom do i work under?",
+        "who is my superior","i want to contact my tech lead","whom do i report to?","where do i report","how to report"],
+        "responses": ["You can reach your tech lead at: *intern's supervisor's contact*","Here is the contact information for your supervisor: *intern's supervisor's contact info*"],
+        "access": "intern"
+    },
+    {
+        "tag": "report",
+        "patterns": ["whom am i answerable to?","where can i submit my work?","i want to get my work verified","who is my supervisor","whom do i work under?",
+            "who is my superior","i want to contact my tech lead","whom do i report to?","where do i report","how to report"],
+        "responses": ["You can reach your tech lead at: *jr dev's supervisor's contact*","Here is the contact information for your supervisor: *jr dev's supervisor's contact info*"],
+        "access": "jr dev"
+    },
+    {
+        "tag": "report",
+        "patterns": ["whom am i answerable to?","where can i submit my work?","i want to get my work verified","who is my supervisor","whom do i work under?",
+            "who is my superior","i want to contact my tech lead","whom do i report to?","where do i report","how to report"],
+        "responses": ["You can reach your tech lead at: *sr dev's supervisor's contact*","Here is the contact information for your supervisor: *sr dev's supervisor's contact info*"],
+        "access": "sr dev"
+    },
+    {
+        "tag": "report",
+        "patterns": ["whom am i answerable to?","where can i submit my work?","i want to get my work verified","who is my supervisor","whom do i work under?",
+            "who is my superior","i want to contact my tech lead","whom do i report to?","where do i report","how to report"],
+        "responses": ["You can reach your tech lead at: *executive's supervisor's contact*","Here is the contact information for your supervisor: *executive's supervisor's contact info*"],
+        "access": "executive"
+    },
+    {
+        "tag": "code",
+        "patterns": ["Can i have the poject files?","Where can i get the projec file","i want the project files","i want the code base","give me the link to project files","how can i get the project files?","i want the code"],
+        "responses": ["Here is the link the project files, *link to project files*","You can pull the files from *link to project files*","You can find the files at *link to project files*","You can start working on these: *link to project files"],
+        "access": "all"
+    },
+    {
+        "tag": "push",
+        "patterns": ["I want to push the files to master.","how can i push the changes?","i want to commit these changes","how can i commit these changes","I want to upload the code"],
+        "responses": ["Sorry, you can't push the code yet, but you can contact your supervisor at: *intern's supervisor's contact*","We're sorry but you dont have the permission to perform this action yet. However, you can reach your supervisor at: *intern's supervisor's contact*"],
+        "access": "intern"
+    },
+    {
+        "tag": "push",
+        "patterns": ["I want to push the files to master.","how can i push the changes?","i want to commit these changes","how can i commit these changes","I want to upload the code"],
+        "responses": ["Sorry, you can't push the code yet, but you can contact your supervisor at: *jr dev's supervisor's contact*","We're sorry but you dont have the permission to perform this action yet. However, you can reach your supervisor at: *jr dev's supervisor's contact*"],
+        "access": "jr dev"
+    },
+    {
+        "tag": "push",
+        "patterns": ["I want to push the files to master.","how can i push the changes?","i want to commit these changes","how can i commit these changes","I want to upload the code"],
+        "responses": ["You can push the chages by following these steps: *steps to push code*","Here's how you can push: *steps to push code*"],
+        "access": "sr dev"
+    },
+    {
+        "tag": "push",
+        "patterns": ["I want to push the files to master.","how can i push the changes?","i want to commit these changes","how can i commit these changes","I want to upload the code"],
+        "responses": ["You can push the chages by following these steps: *steps to push code*","Here's how you can push: *steps to push code*"],
+        "access": "executive"
+    },
+    {
+        "tag": "bye",
+        "patterns": ["I want to go","nice talking to you","bye","i want you to leave","see you later","i am done","thanks"],
+        "responses": ["It was great meeting you! Bye","See you again, my friend","Meet you on the other side","Okay! Have a nice day!"],
+        "access": "all"
+    },
+    {
+        "tag":"walkthrough",
+        "patterns": ["Can you show me around here?","I am new here","I want a turorial","How do things get done here?","Give me a walkthrough"],
+        "responses": ["Sure, let me show you around!","Sure, lets take a trip down the project!","I'm very excited to show you around!","Sure, follow along!"],
+        "access": "all"
+    }
+],
+"last_modified": 0
+}
